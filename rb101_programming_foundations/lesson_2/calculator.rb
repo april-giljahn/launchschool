@@ -1,9 +1,15 @@
+#this is not main branch
+
 def prompt(message)
   puts "=> #{message}"
 end
 
 def valid_number?(num)
   num.to_i() !=0
+end
+ 
+def integer?(input)
+  input.to_i.to_s == input
 end
 
 def operation_to_message(answer)
