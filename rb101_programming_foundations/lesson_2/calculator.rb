@@ -1,5 +1,3 @@
-#this is not main branch
-
 def prompt(message)
   puts "=> #{message}"
 end
