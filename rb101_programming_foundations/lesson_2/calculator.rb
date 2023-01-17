@@ -10,6 +10,11 @@ def integer?(input)
   input.to_i.to_s == input
 end
 
+def float?(input)
+  input.to_f.to_s == input
+end
+
+
 def operation_to_message(answer)
   case answer
   when '1'
@@ -83,11 +88,11 @@ prompt("#{operation_to_message(answer)} the two numbers..")
 
 result = case answer
 when '1'
-  result = num1 + num2
+  result = num1  + num2
 when '2'
-  result = num1 - num2
+  result = num1  - num2
 when '3'
-  result = num1 * num2
+  result = num1  * num2
 when '4'
   result = num1.to_f / num2.to_f
 else
