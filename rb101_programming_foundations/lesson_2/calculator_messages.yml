@@ -1,0 +1,6 @@
+welcome: "Welcome to Calculator! Enter your name:"
+valid_name: "Make sure to enter a valid name."
+num_one: "Enter a number:"
+num_two: "Enter a second number:"
+valid_number: "Hmmmmm...that doesnt look like a valid number."
+again?: "do you want to perform another calculation?(type 'y' for again"
