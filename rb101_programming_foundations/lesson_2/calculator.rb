@@ -16,7 +16,7 @@ end
 
 
 def operation_to_message(answer)
-  case answer
+  word = case answer
   when '1'
     "adding"
   when '2'
@@ -86,6 +86,7 @@ end
 
 prompt("#{operation_to_message(answer)} the two numbers..")
 
+
 result = case answer
 when '1'
   result = num1  + num2
@@ -98,6 +99,7 @@ when '4'
 else
  puts "enter a valid number please"
 end
+
 
 prompt("The result is #{result}")
 prompt("do you want to perform another calculation?(type 'y' for again")
