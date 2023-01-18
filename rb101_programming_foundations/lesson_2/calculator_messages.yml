@@ -1,6 +1,15 @@
-welcome: "Welcome to Calculator! Enter your name:"
-valid_name: "Make sure to enter a valid name."
-num_one: "Enter a number:"
-num_two: "Enter a second number:"
-valid_number: "Hmmmmm...that doesnt look like a valid number."
-again?: "do you want to perform another calculation?(type 'y' for again"
+en: 
+  welcome: "Welcome to Calculator! Enter your name:"
+  valid_name: "Make sure to enter a valid name."
+  num_one: "Enter a number:"
+  num_two: "Enter a second number:"
+  valid_number: "Hmmmmm...that doesnt look like a valid number."
+  again?: "do you want to perform another calculation?(type 'y' for again"
+
+es:
+  welcome: "¡Bienvenido a Calculadora! Ingrese su nombre:"
+  valid_name: "Asegúrate de ingresar un nombre válido."
+  num_one: "Ingrese un número:"
+  num_two: "Ingrese un segundo número:"
+  valid_number: "Hmmmmm... eso no parece un número válido."
+  again?: "¿quieres realizar otro cálculo? (escriba 'y' para otra vez"

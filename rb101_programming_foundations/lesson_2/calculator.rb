@@ -1,8 +1,15 @@
+LANGUAGE = 'en'
 require 'yaml'
 MESSAGES = YAML.load_file('calculator_messages.yml')
 
-def prompt(message)
-  puts "=> #{message}"
+
+
+def prompt(key)
+  message = messages(key, LANGUAGE)
+  puts("=> #{message}")
+end
+def messages(message, lang ='en')
+  MESSAGES[lang][message]
 end
 
 def valid_number?(num)
@@ -31,41 +38,41 @@ def operation_to_message(answer)
   end
 end
 
-prompt(MESSAGES['welcome'])
+prompt('welcome')
 name = ''
 loop do
   name = gets.chomp
 
   if name.empty?()
-    prompt(MESSAGES['valid_name'])
+    prompt('valid_name')
   else
     break
   end
 end
 
-prompt("hi, #{name}!")
+puts("hi, #{name}!")
 
 loop do
 num1 = ''
 loop do
-  prompt(MESSAGES['num_one'])
+  prompt('num_one')
   num1 = gets.chomp.to_i
 
   if valid_number?(num1)
     break
   else
-    prompt(MESSAGES["valid_number"])
+    prompt("valid_number")
   end
 end
 num2 = ''
 loop do
-  prompt(MESSAGES['num_two'])
+  prompt('num_two')
   num2 = gets.chomp.to_i
 
   if valid_number?(num2)
     break
   else
-    prompt(MESSAGES["valid_number"])
+    prompt("valid_number")
   end
 end
 operator_prompt = <<-MSG
@@ -76,7 +83,7 @@ What operation would you like to perform?
 4) divide
 MSG
 
-prompt(operator_prompt)
+puts(operator_prompt)
 answer = ''
 loop do
 answer = gets.chomp
@@ -87,7 +94,7 @@ else
 end
 end
 
-prompt("#{operation_to_message(answer)} the two numbers..")
+puts("#{operation_to_message(answer)} the two numbers..")
 
 
 result = case answer
@@ -104,10 +111,10 @@ else
 end
 
 
-prompt("The result is #{result}")
-prompt(MESSAGES['again?'])
+puts("The result is #{result}")
+prompt('again?')
 obtain = gets.chomp
 break unless obtain.downcase().start_with?('y')
 end
 
-prompt("goodbye!")
+puts("goodbye!")
