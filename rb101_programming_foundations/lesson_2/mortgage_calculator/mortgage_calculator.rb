@@ -38,50 +38,50 @@ end
 prompt("welcome")
 
 loop do
-prompt("name")
-name = gets.chomp
-unless name.empty?
-  puts("Nice to meet you, #{name}!")
-  break
-else
-  prompt("valid_name")
-end
-end
-
-loop do
-loan_amount = ''
-loop do
-  prompt("loan_am")
-  loan_amount = gets.chomp
-  if valid_num?(loan_amount)
-    puts("OK, perfect! I have your loan amount as $#{loan_amount} USD")
-    break
-  else
-    prompt("valid_num")
+    prompt("name")
+    name = gets.chomp
+    unless name.empty?
+      puts("Nice to meet you, #{name}!")
+      break
+    else
+      prompt("valid_name")
+    end
   end
-end
+
+  loop do
+    loan_amount = ''
+  loop do
+    prompt("loan_am")
+    loan_amount = gets.chomp
+      if valid_num?(loan_amount)
+        puts("OK, perfect! I have your loan amount as $#{loan_amount} USD")
+        break
+      else
+        prompt("valid_num")
+      end
+  end
 apr = ''
 loop do
-prompt("enter_apr")
-apr = gets.chomp
-if valid_num?(apr)
-  puts("Alright, I have your APR as #{apr}%. Now on to the last thing...")
-  break
-else
-  prompt("valid_num")
-end
+  prompt("enter_apr")
+  apr = gets.chomp
+  if valid_num?(apr)
+   puts("Alright, I have your APR as #{apr}%. Now on to the last thing...")
+   break
+  else
+   prompt("valid_num")
+  end
 end
 
 loan_duration = ''
 loop do
-prompt("loan_dur")
-loan_duration = gets.chomp
-if valid_num?(loan_duration)
-  puts("Perfect! your loan duration is #{loan_duration} years.")
-  break
-else 
-  prompt("valid_num")
-end
+  prompt("loan_dur")
+  loan_duration = gets.chomp
+  if valid_num?(loan_duration)
+    puts("Perfect! your loan duration is #{loan_duration} years.")
+    break
+  else 
+    prompt("valid_num")
+  end
 end
 
 prompt("pert_info")
