@@ -29,22 +29,20 @@ def duration_months(num)
   num * 12
 end
 
-
 def monthly_payment(num1, num2, num3)
   (num1 / num2) * num3
 end
-
 
 prompt("welcome")
 
 loop do
     prompt("name")
     name = gets.chomp
-    unless name.empty?
+    if name.empty?
+      prompt("valid_name")
+    else
       puts("Nice to meet you, #{name}!")
       break
-    else
-      prompt("valid_name")
     end
   end
 
