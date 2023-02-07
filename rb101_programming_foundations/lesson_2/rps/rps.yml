@@ -1,0 +1,4 @@
+win: 'You win!'
+comp_won: "Computer won!"
+tie: "It's a tie!"
+again: "Do you want to play again?"
